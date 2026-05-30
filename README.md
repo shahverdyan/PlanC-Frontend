@@ -189,7 +189,9 @@ Flutter does not natively support `.env` files. Sensitive configuration is handl
 
 - **`google-services.json`** — Firebase config file placed at `android/app/`. Not included in the repository.
 - **Supabase credentials** — URL and anon key set directly in `lib/main.dart`. Not included in the repository.
-
+- **Google Maps API key** — set in `android/app/src/main/AndroidManifest.xml` 
+  under the `com.google.android.geo.API_KEY` meta-data field. 
+  Not included in the repository.
 ---
 
 ## Available commands
