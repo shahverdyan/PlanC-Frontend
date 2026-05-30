@@ -4,43 +4,49 @@
 [![Dart](https://img.shields.io/badge/Dart-3.11.4-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
 [![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
 [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
-[![SonarCloud](https://img.shields.io/badge/SonarCloud-F3702A?style=for-the-badge&logo=sonarcloud&logoColor=white)](https://sonarcloud.io/project/overview?id=pes2526q2-11-gei-upc_PlanC-Frontend)
 
-Repositori de l'aplicació mòbil Android de **PlanC**, una plataforma social interactiva que transforma l'Agenda Cultural de Catalunya en una experiència col·lectiva. Els usuaris poden descobrir activitats culturals, organitzar quedades amb amics, comunicar-se per xat en temps real i guanyar punts per la seva participació cultural.
+> 🎓 This repository is a public mirror of a private organization repo developed during the **Software Engineering Project (PES)** course at **FIB — UPC** (2025–2026 Q2). The app was built by a team of 7 students over the course of a full academic semester, working in Scrum sprints with separate frontend and backend repositories.
 
 ---
 
-## Taula de continguts
+## 📱 Try the app
 
-1. [Descripció del projecte](#descripció-del-projecte)
-2. [Equip](#equip)
-3. [Stack tecnològic](#stack-tecnològic)
-4. [Arquitectura i mòduls](#arquitectura-i-mòduls)
-5. [Requisits previs](#requisits-previs)
-6. [Instal·lació i configuració](#installació-i-configuració)
-7. [Variables de configuració](#variables-de-configuració)
-8. [Comandes disponibles](#comandes-disponibles)
+Download and install the APK directly on your Android device — no need to build from source:
+
+👉 **[Download APK — v1.0.0](https://github.com/shahverdyan/PlanC-Frontend/releases/tag/v1.0.0)**
+
+> Requires Android 5.0 or higher. You may need to enable **"Install from unknown sources"** in your device settings.
+
+---
+
+## Table of contents
+
+1. [Project description](#project-description)
+2. [Team](#team)
+3. [Tech stack](#tech-stack)
+4. [Architecture and modules](#architecture-and-modules)
+5. [Prerequisites](#prerequisites)
+6. [Installation and setup](#installation-and-setup)
+7. [Configuration variables](#configuration-variables)
+8. [Available commands](#available-commands)
 9. [Tests](#tests)
-10. [Desplegament i distribució](#desplegament-i-distribució)
-11. [Links útils](#links-útils)
+10. [Useful links](#useful-links)
 
 ---
 
-## Descripció del projecte
+## Project description
 
-PlanC neix de la voluntat de fomentar el consum de cultura i la socialització al voltant dels esdeveniments culturals de Catalunya. L'aplicació transforma l'Agenda Cultural de Catalunya en una plataforma social interactiva, connectant usuaris amb interessos compartits perquè puguin descobrir activitats culturals i assistir-hi conjuntament.
+PlanC is a social mobile app that transforms the **Agenda Cultural de Catalunya** (Catalonia's official cultural events API) into a collective experience. Users can discover cultural events, organize meetups with friends, chat in real time, and earn points for their cultural participation.
 
-Aquest repositori conté l'aplicació mòbil desenvolupada amb Flutter per a la plataforma Android. Es comunica amb el backend via API REST i WebSockets.
-
-**Context acadèmic:** Projecte de l'assignatura PES — Projecte d'Enginyeria del Software, curs 2025-2026 Q2, Facultat d'Informàtica de Barcelona (FIB), Universitat Politècnica de Catalunya (UPC).
+This repository contains the Android mobile app built with Flutter. It communicates with the backend via REST API and WebSockets.
 
 ---
 
-## Equip
+## Team
 
-**Grup FemBoys — PES Q2 2025-2026**
+**Group FemBoys — PES Q2 2025–2026 · FIB, UPC**
 
-| Membre | Correu |
+| Member | Contact |
 |---|---|
 | Eric Ruiz | eric.ruiz.miro@estudiantat.upc.edu |
 | Roger Guinovart | roger.guinovart@estudiantat.upc.edu |
@@ -50,123 +56,126 @@ Aquest repositori conté l'aplicació mòbil desenvolupada amb Flutter per a la 
 | Roger Corcoles | roger.corcoles@estudiantat.upc.edu |
 | Izan Jorge | izan.jorge@estudiantat.upc.edu |
 
-**Coordinador:** carles.farre@upc.edu
-**Professor:** albert.pinto@upc.edu
-
 ---
 
-## Stack tecnològic
+## Tech stack
 
-| Tecnologia | Versió | Ús |
+| Technology | Version | Purpose |
 |---|---|---|
-| Flutter | 3.41.6 (stable) | Framework de desenvolupament |
-| Dart | 3.11.4 | Llenguatge de programació |
-| flutter_riverpod | ^2.5.1 | Gestió d'estat i injecció de dependències |
-| go_router | ^13.2.0 | Navegació declarativa |
-| dio | ^5.4.3 | Client HTTP per a l'API REST |
-| supabase_flutter | ^2.5.0 | Autenticació i Storage |
-| google_maps_flutter | ^2.6.0 | Mapa interactiu d'activitats |
-| socket_io_client | ^3.1.4 | WebSockets per al xat en temps real |
-| firebase_core | ^3.6.0 | Inicialització de Firebase |
-| firebase_messaging | ^15.1.3 | Notificacions push (FCM) |
-| geolocator | ^14.0.2 | Geolocalització per validar assistència |
-| flutter_secure_storage | ^10.0.0 | Emmagatzematge segur de tokens |
-| table_calendar | ^3.1.2 | Vista de calendari d'activitats |
-| device_calendar | ^4.3.2 | Integració amb el calendari del dispositiu |
-| image_picker | ^1.2.1 | Selecció de foto de perfil i xat |
-| share_plus | ^12.0.2 | Compartir activitats des de l'app |
-| intl | ^0.20.2 | Internacionalització i format de dates |
+| Flutter | 3.41.6 (stable) | Mobile development framework |
+| Dart | 3.11.4 | Programming language |
+| flutter_riverpod | ^2.5.1 | State management and dependency injection |
+| go_router | ^13.2.0 | Declarative navigation |
+| dio | ^5.4.3 | HTTP client for REST API |
+| supabase_flutter | ^2.5.0 | Authentication and file storage |
+| google_maps_flutter | ^2.6.0 | Interactive map of cultural events |
+| socket_io_client | ^3.1.4 | WebSockets for real-time chat |
+| firebase_core | ^3.6.0 | Firebase initialization |
+| firebase_messaging | ^15.1.3 | Push notifications (FCM) |
+| geolocator | ^14.0.2 | Geolocation for attendance validation |
+| flutter_secure_storage | ^10.0.0 | Secure token storage |
+| table_calendar | ^3.1.2 | Calendar view of upcoming events |
+| device_calendar | ^4.3.2 | Google Calendar integration |
+| image_picker | ^1.2.1 | Profile photo and chat image selection |
+| share_plus | ^12.0.2 | Share events from the app |
+| intl | ^0.20.2 | Internationalization and date formatting |
 
 ---
 
-## Arquitectura i mòduls
+## Architecture and modules
 
-L'aplicació segueix una **arquitectura modular per features** combinada amb **Clean Architecture** i el patró **MVVM** a la capa de presentació. Cada feature és independent i s'organitza en tres capes: Presentació, Domini i Dades.
+The app follows a **feature-based modular architecture** combined with **Clean Architecture** and the **MVVM** pattern at the presentation layer. Each feature is self-contained and organized into three layers: Presentation, Domain, and Data.
 
-La gestió d'estat es fa amb **Riverpod**, on els `Notifier` actuen com a ViewModel i els widgets observen l'estat via `ref.watch()`.
+State management is handled with **Riverpod**, where `Notifier` classes act as ViewModels and widgets observe state via `ref.watch()`.
 
-### Estructura de directoris
+### Directory structure
 
 ```
 lib/
-├── core/          # Configuració global, clients HTTP, interceptors
-├── features/      # Mòduls de l'aplicació (vegeu taula)
-├── l10n/          # Fitxers de localització (ca, es, en)
-├── shared/        # Widgets, models i utilitats compartides
-└── main.dart      # Punt d'entrada de l'aplicació
+├── core/          # Global config, HTTP clients, interceptors, theme
+├── features/      # App modules (see table below)
+├── l10n/          # Localization files (Catalan, Spanish, English)
+├── shared/        # Shared widgets, models and utilities
+└── main.dart      # App entry point
 ```
 
-### Mòduls (features)
+### Feature modules
 
-| Mòdul | Descripció |
+| Module | Description |
 |---|---|
-| `auth` | Registre en 3 passos, login, logout, verificació de correu i OAuth amb Google |
-| `map` | Mapa interactiu amb activitats culturals geolocalitzades i filtres |
-| `activitats` | Detall d'activitat, quedades associades, valoracions i validació per geolocalització |
-| `groups` | Creació i gestió de quedades, participants i xat de grup |
-| `chat` | Xats individuals i grupals, enviament de missatges i imatges en temps real |
-| `amistats` | Sol·licituds d'amistat, llista d'amics i suggerències |
-| `perfil` | Perfil d'usuari, edició de dades, foto i biografia |
-| `notificacions` | Historial de notificacions push i badge de no llegides |
-| `feed` | Feed social d'activitats i publicacions |
-| `publicacions` | Publicacions sobre activitats, likes i comentaris |
-| `interaccions` | Likes, comentaris i respostes a publicacions |
-| `cercador` | Cerca d'activitats i perfils d'usuari |
-| `preferits` | Activitats guardades per l'usuari |
-| `calendari` | Vista de calendari amb les activitats a les quals l'usuari s'ha apuntat |
-| `navigation` | Barra de navegació inferior global i routing principal |
-| `settings` | Configuració de compte i preferències de l'app |
-| `gustos` | Selecció de categories culturals d'interès |
-| `redireccioCompraEntrades` | Redirecció a la compra d'entrades d'una activitat |
+| `auth` | 3-step registration, login, logout, email verification and Google OAuth |
+| `map` | Interactive map with geolocated cultural events and filters |
+| `activitats` | Activity detail, associated meetups, ratings and geolocation-based attendance validation |
+| `groups` | Meetup creation and management, participants and group chat |
+| `chat` | Individual and group chats, real-time messaging and image sharing |
+| `amistats` | Friend requests, friends list and suggestions |
+| `perfil` | User profile, data editing, photo and bio |
+| `notificacions` | Push notification history and unread badge |
+| `feed` | Activity discovery feed and publications feed |
+| `publicacions` | Posts about activities, likes and comments |
+| `interaccions` | Likes, comments and replies on posts |
+| `cercador` | Search for activities and user profiles |
+| `preferits` | Activities saved by the user |
+| `calendari` | Calendar view of events the user has signed up for |
+| `navigation` | Global bottom navigation bar and main routing |
+| `settings` | Account settings and app preferences |
+| `gustos` | Cultural interest category selection |
+| `redireccioCompraEntrades` | Redirect to ticket purchase for an activity |
 
 ---
 
-## Requisits previs
+## Prerequisites
 
-- **Flutter** 3.41.6 o superior (channel stable)
-- **Dart** 3.11.4 o superior
-- **Android SDK** amb API level 21 (Android 5.0) o superior
-- **Android Studio** o **VS Code** amb les extensions de Flutter i Dart
-- Fitxer `google-services.json` (Firebase) col·locat a `android/app/`
-- Accés al backend desplegat o en local
+- **Flutter** 3.41.6 or higher (stable channel)
+- **Dart** 3.11.4 or higher
+- **Android SDK** with API level 21 (Android 5.0) or higher
+- **Android Studio** or **VS Code** with Flutter and Dart extensions
+- A `google-services.json` file (Firebase) placed at `android/app/`
+- Access to the deployed backend (or running it locally)
 
-> ⚠️ L'aplicació només suporta **Android**. iOS no està configurat en aquest repositori.
+> ⚠️ This app supports **Android only**. iOS is not configured in this repository.
 
 ---
 
-## Instal·lació i configuració
+## Installation and setup
 
-### 1. Clona el repositori
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/pes2526q2-11-gei-upc/PlanC-Frontend.git
+git clone https://github.com/shahverdyan/PlanC-Frontend.git
 cd PlanC-Frontend
 ```
 
-### 2. Instal·la les dependències
+### 2. Install dependencies
 
 ```bash
 flutter pub get
 ```
 
-### 3. Configura Firebase
+### 3. Configure Firebase
 
-Col·loca el fitxer `google-services.json` proporcionat per l'equip a:
+Place the `google-services.json` file at:
 
 ```
 android/app/google-services.json
 ```
 
-> ⚠️ Aquest fitxer conté credencials i no està al repositori. Sol·licita'l a un membre de l'equip.
+> ⚠️ This file contains credentials and is not included in the repository. Contact a team member to get it.
 
-### 4. Configura les URLs del backend
+### 4. Configure Supabase credentials
 
-Al fitxer de configuració corresponent (normalment a `lib/core/`), assegura't que la URL base de l'API apunta al backend correcte:
+In `lib/main.dart`, fill in the Supabase URL and anon key:
 
-- **Producció:** `https://planc-backend-aff2.onrender.com`
-- **Local:** `http://10.0.2.2:3000` (emulador Android) o `http://localhost:3000` (dispositiu físic)
+```dart
+await Supabase.initialize(
+  url: 'YOUR_SUPABASE_URL',
+  anonKey: 'YOUR_SUPABASE_ANON_KEY',
+);
+```
 
-### 5. Arrenca l'aplicació
+> ⚠️ These credentials are not included in the repository. Contact a team member to get them, or set up your own Supabase project.
+
+### 5. Run the app
 
 ```bash
 flutter run
@@ -174,40 +183,40 @@ flutter run
 
 ---
 
-## Variables de configuració
+## Configuration variables
 
-A diferència del backend, Flutter no usa fitxers `.env` de manera nativa. Les configuracions sensibles es gestionen de dues maneres:
+Flutter does not natively support `.env` files. Sensitive configuration is handled as follows:
 
-- **`google-services.json`** — fitxer de Firebase col·locat a `android/app/`. No s'inclou al repositori.
-- **Secrets de GitHub Actions** — per al pipeline de CI/CD s'utilitzen els secrets `FIREBASE_TOKEN` i `GOOGLE_SERVICES_JSON` configurats al repositori de GitHub.
+- **`google-services.json`** — Firebase config file placed at `android/app/`. Not included in the repository.
+- **Supabase credentials** — URL and anon key set directly in `lib/main.dart`. Not included in the repository.
 
 ---
 
-## Comandes disponibles
+## Available commands
 
 ```bash
-# Arrancar l'app en mode debug
+# Run the app in debug mode
 flutter run
 
-# Compilar APK en mode debug
+# Build debug APK
 flutter build apk --debug
 
-# Compilar APK en mode release
+# Build release APK
 flutter build apk --release
 
-# Executar tots els tests
+# Run all tests
 flutter test
 
-# Anàlisi estàtica del codi
+# Static code analysis
 flutter analyze
 
-# Actualitzar dependències
+# Install dependencies
 flutter pub get
 
-# Netejar el build
+# Clean build artifacts
 flutter clean
 
-# Generar fitxers de localització
+# Generate localization files
 flutter gen-l10n
 ```
 
@@ -215,77 +224,34 @@ flutter gen-l10n
 
 ## Tests
 
-El projecte utilitza el paquet oficial **flutter_test** per als tests de widget i unitaris, i **mockito** per als mocks.
+The project uses the official **flutter_test** package for widget and unit tests, and **mockito** for mocks.
 
 ```bash
-# Executar tots els tests
+# Run all tests
 flutter test
 
-# Executar un fitxer de test concret
+# Run a specific test folder
 flutter test test/features/cercador/
 ```
 
-### Cobertura de tests per feature
+### Test coverage by feature
 
-| Feature | Fitxers de test |
+| Feature | Test files |
 |---|---|
 | `cercador` | domain, providers ×2, widgets |
 | `groups` | datasources, repository, models ×2, provider, screens, widgets |
-| `redireccioCompraEntrades` | repository, usecase ×2 amb mocks, widget |
-| Arrel | widget_test.dart |
+| `redireccioCompraEntrades` | repository, usecase ×2 with mocks, widget |
+| Root | widget_test.dart |
 
-**Total: 16 fitxers de test** distribuïts en 3 features i el test arrel.
-
----
-
-## Desplegament i distribució
-
-L'APK de l'aplicació es distribueix automàticament als testers via **Firebase App Distribution** quan es fusiona codi a les branques principals.
-
-### Pipeline CI/CD
-
-El repositori té dos workflows de GitHub Actions:
-
-**`main.yml` — Flutter CI**
-S'executa en cada push i Pull Request cap a `develop` i `main`. Executa els passos següents:
-1. Checkout del codi
-2. Instal·lació de Flutter (channel stable, sense versió fixada)
-3. `flutter pub get`
-4. `flutter analyze`
-5. `flutter test`
-6. Build check (`flutter build apk --debug`)
-
-**`build-apk.yml` — Build & Distribute APK**
-S'executa en cada push a `develop` i `main`. Compila l'APK de release i la distribueix automàticament:
-1. Checkout del codi
-2. Configuració de Java 17 (distribució Zulu)
-3. Instal·lació de Flutter 3.41.8
-4. `flutter pub get`
-5. `flutter build apk --release`
-6. Pujada a Firebase App Distribution
-
-### Grups de testers
-
-| Branca | Grup de testers |
-|---|---|
-| `develop` i `main` | `testers` (tot l'equip) |
-| `main` | `profe` (professors i coordinador) |
-
-Els testers reben una notificació automàtica per correu quan hi ha una nova versió disponible per descarregar.
-
-> ℹ️ Els workflows estan temporalment desactivats per consum de minuts de GitHub Actions. Es poden reactivar descomentant els triggers als fitxers corresponents.
+**Total: 16 test files** across 3 features and the root test.
 
 ---
 
-## Links útils
+## Useful links
 
-| Recurs | URL |
+| Resource | URL |
 |---|---|
-| Repositori Frontend | https://github.com/pes2526q2-11-gei-upc/PlanC-Frontend |
-| Repositori Backend | https://github.com/pes2526q2-11-gei-upc/PlanC-Backend |
-| Backend desplegat | https://planc-backend-aff2.onrender.com |
+| Frontend repository | https://github.com/shahverdyan/PlanC-Frontend |
+| Backend repository | https://github.com/shahverdyan/PlanC-Backend |
+| Deployed backend | https://planc-backend-aff2.onrender.com |
 | API docs (Swagger) | https://planc-backend-aff2.onrender.com/api/docs |
-| SonarCloud Frontend | https://sonarcloud.io/project/overview?id=pes2526q2-11-gei-upc_PlanC-Frontend |
-| SonarCloud Backend | https://sonarcloud.io/project/overview?id=pes2526q2-11-gei-upc_PlanC-Backend |
-| Taiga (gestió del projecte) | https://tree.taiga.io/project/izanjorge-pes-femboys/timeline |
-| Firebase App Distribution | https://console.firebase.google.com/u/2/project/planc-b1964/appdistribution |
