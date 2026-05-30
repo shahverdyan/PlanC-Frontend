@@ -1,0 +1,10 @@
+<network-security-config>
+    <domain-config>
+        <domain includeSubdomains="true">agenda.cultura.gencat.cat</domain>
+        <trust-anchors>
+            <certificates src="@raw/gencat_ca"/>
+            <certificates src="@raw/gencat_intermediate"/>
+            <certificates src="system"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

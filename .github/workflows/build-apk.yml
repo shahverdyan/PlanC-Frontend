@@ -1,0 +1,36 @@
+name: Build & Distribute APK
+on:
+  push:
+    branches: [] # Temporalment desactivat - minuts esgotats
+    # branches: [develop, main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.41.8'
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Build APK
+        run: flutter build apk --release
+      - name: Upload to Firebase App Distribution
+        uses: wzieba/Firebase-Distribution-Github-Action@v1
+        with:
+          appId: 1:939977593542:android:8397f11c48839da01dbdc7
+          token: ${{ secrets.FIREBASE_TOKEN }}
+          groups: testers
+          file: build/app/outputs/flutter-apk/app-release.apk
+      - name: Upload to Firebase App Distribution (profe)
+        if: github.ref == 'refs/heads/main'
+        uses: wzieba/Firebase-Distribution-Github-Action@v1
+        with:
+          appId: 1:939977593542:android:8397f11c48839da01dbdc7
+          token: ${{ secrets.FIREBASE_TOKEN }}
+          groups: profe
+          file: build/app/outputs/flutter-apk/app-release.apk
