@@ -4,6 +4,7 @@
 [![Dart](https://img.shields.io/badge/Dart-3.11.4-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
 [![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
 [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 > 🎓 This repository is a public mirror of a private organization repo developed during the **Software Engineering Project (PES)** course at **FIB — UPC** (2025–2026 Q2). The app was built by a team of 7 students over the course of a full academic semester, working in Scrum sprints with separate frontend and backend repositories.
 
@@ -22,15 +23,16 @@ Download and install the APK directly on your Android device — no need to buil
 ## Table of contents
 
 1. [Project description](#project-description)
-2. [Team](#team)
-3. [Tech stack](#tech-stack)
-4. [Architecture and modules](#architecture-and-modules)
-5. [Prerequisites](#prerequisites)
-6. [Installation and setup](#installation-and-setup)
-7. [Configuration variables](#configuration-variables)
-8. [Available commands](#available-commands)
-9. [Tests](#tests)
-10. [Useful links](#useful-links)
+2. [Screenshots](#screenshots)
+3. [Team](#team)
+4. [Tech stack](#tech-stack)
+5. [Architecture and modules](#architecture-and-modules)
+6. [Prerequisites](#prerequisites)
+7. [Installation and setup](#installation-and-setup)
+8. [Configuration variables](#configuration-variables)
+9. [Available commands](#available-commands)
+10. [Tests](#tests)
+11. [Useful links](#useful-links)
 
 ---
 
@@ -42,13 +44,29 @@ This repository contains the Android mobile app built with Flutter. It communica
 
 ---
 
+## Screenshots
+
+| Explore feed | Map | Search |
+|:---:|:---:|:---:|
+| ![Explore](screenshots/explore.png) | ![Map](screenshots/map.png) | ![Search](screenshots/search.png) |
+
+| Recommended | Activity detail | Tickets & ratings |
+|:---:|:---:|:---:|
+| ![Recommended](screenshots/recommended.png) | ![Activity detail](screenshots/activity_detail_1.png) | ![Tickets](screenshots/activity_detail_2.png) |
+
+| Profile — Posts | Profile — Trophies | Publications feed |
+|:---:|:---:|:---:|
+| ![Profile posts](screenshots/profile.png) | ![Profile trophies](screenshots/settings.png) | ![Publications](screenshots/publications.png) |
+
+---
+
 ## Team
 
 **Group FemBoys — PES Q2 2025–2026 · FIB, UPC**
 
 | Member | Github | Email |
 |---|---|---|
-| Eric Ruiz | [eirc.ruiz.miro](https://github.com/ericruizmiro-star) | eric.ruiz.miro@estudiantat.upc.edu | 
+| Eric Ruiz | [eirc.ruiz.miro](https://github.com/ericruizmiro-star) | eric.ruiz.miro@estudiantat.upc.edu |
 | Roger Guinovart | [rogerguinovart](https://github.com/rogerguinovart-maker) | roger.guinovart@estudiantat.upc.edu |
 | Jordi Caballeria | [JordiCaballeriaUPC](https://github.com/JordiCaballeriaUPC) | jordi.caballeria@estudiantat.upc.edu |
 | Aleks Shahverdyan | [Aleks](https://github.com/shahverdyan) | aleks.shahverdyan@estudiantat.upc.edu |
@@ -189,9 +207,8 @@ Flutter does not natively support `.env` files. Sensitive configuration is handl
 
 - **`google-services.json`** — Firebase config file placed at `android/app/`. Not included in the repository.
 - **Supabase credentials** — URL and anon key set directly in `lib/main.dart`. Not included in the repository.
-- **Google Maps API key** — set in `android/app/src/main/AndroidManifest.xml` 
-  under the `com.google.android.geo.API_KEY` meta-data field. 
-  Not included in the repository.
+- **Google Maps API key** — set in `android/app/src/main/AndroidManifest.xml` under the `com.google.android.geo.API_KEY` meta-data field. Not included in the repository.
+
 ---
 
 ## Available commands
