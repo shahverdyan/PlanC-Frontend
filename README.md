@@ -46,15 +46,15 @@ This repository contains the Android mobile app built with Flutter. It communica
 
 **Group FemBoys — PES Q2 2025–2026 · FIB, UPC**
 
-| Member | Contact |
+| Member | Github | Email |
 |---|---|
-| Eric Ruiz | eric.ruiz.miro@estudiantat.upc.edu |
-| Roger Guinovart | roger.guinovart@estudiantat.upc.edu |
-| Jordi Caballeria | jordi.caballeria@estudiantat.upc.edu |
-| Aleks Shahverdyan | aleks.shahverdyan@estudiantat.upc.edu |
-| Naia Cuní | naia.cuni.i@estudiantat.upc.edu |
-| Roger Corcoles | roger.corcoles@estudiantat.upc.edu |
-| Izan Jorge | izan.jorge@estudiantat.upc.edu |
+| Eric Ruiz | [eirc.ruiz.miro](https://github.com/ericruizmiro-star) | eric.ruiz.miro@estudiantat.upc.edu | 
+| Roger Guinovart | [rogerguinovart](https://github.com/rogerguinovart-maker) | roger.guinovart@estudiantat.upc.edu |
+| Jordi Caballeria | [JordiCaballeriaUPC](https://github.com/JordiCaballeriaUPC) | jordi.caballeria@estudiantat.upc.edu |
+| Aleks Shahverdyan | [Aleks](https://github.com/shahverdyan) | aleks.shahverdyan@estudiantat.upc.edu |
+| Naia Cuní | [Naia](https://github.com/Nuuski) | naia.cuni.i@estudiantat.upc.edu |
+| Roger Corcoles | [RogerCorcoles](https://github.com/RogerCorcoles) | roger.corcoles@estudiantat.upc.edu |
+| Izan Jorge | [izanjorge](https://github.com/izanjorge) | izan.jorge@estudiantat.upc.edu |
 
 ---
 
