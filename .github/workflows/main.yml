@@ -1,24 +1,24 @@
-name: Flutter CI
-on:
+#name: Flutter CI
+#on:
   # push:                     # Temporalment desactivat - minuts esgotats
   #   branches: [ main, develop ]
   # pull_request:             # Temporalment desactivat - minuts esgotats
   #   branches: [ main, develop ]
-jobs:
-  ci:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout del repositori
-        uses: actions/checkout@v4
-      - name: Instal·lar Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          channel: stable
-      - name: Instal·lar dependències
-        run: flutter pub get
-      - name: Anàlisi estàtica
-        run: flutter analyze
-      - name: Executar tests
-        run: flutter test
-      - name: Build check
-        run: flutter build apk --debug
+#jobs:
+#  ci:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout del repositori
+#        uses: actions/checkout@v4
+#      - name: Instal·lar Flutter
+#        uses: subosito/flutter-action@v2
+#        with:
+#          channel: stable
+#      - name: Instal·lar dependències
+#        run: flutter pub get
+#      - name: Anàlisi estàtica
+#        run: flutter analyze
+#      - name: Executar tests
+#        run: flutter test
+#      - name: Build check
+#        run: flutter build apk --debug
