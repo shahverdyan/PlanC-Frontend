@@ -47,7 +47,7 @@ This repository contains the Android mobile app built with Flutter. It communica
 **Group FemBoys — PES Q2 2025–2026 · FIB, UPC**
 
 | Member | Github | Email |
-|---|---|
+|---|---|---|
 | Eric Ruiz | [eirc.ruiz.miro](https://github.com/ericruizmiro-star) | eric.ruiz.miro@estudiantat.upc.edu | 
 | Roger Guinovart | [rogerguinovart](https://github.com/rogerguinovart-maker) | roger.guinovart@estudiantat.upc.edu |
 | Jordi Caballeria | [JordiCaballeriaUPC](https://github.com/JordiCaballeriaUPC) | jordi.caballeria@estudiantat.upc.edu |
